@@ -18,6 +18,7 @@ type SelectStoryArgs = {
   outlined: boolean;
   hideLabel: boolean;
   label: string;
+  zIndex?: number;
 };
 
 export const Playground: StoryObj<SelectStoryArgs> = {
@@ -29,6 +30,7 @@ export const Playground: StoryObj<SelectStoryArgs> = {
     outlined: true,
     hideLabel: false,
     label: "Label",
+    zIndex: 3000,
     options: [
       { value: "1", label: "Apple" },
       { value: "2", label: "Banana" },
@@ -52,6 +54,7 @@ export const Playground: StoryObj<SelectStoryArgs> = {
         options={args.options}
         hideLabel={args.hideLabel}
         label={args.label}
+        zIndex={args.zIndex}
       />
     );
   },

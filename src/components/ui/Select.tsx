@@ -19,6 +19,7 @@ type SelectProps = {
   outline?: boolean;
   hideLabel?: boolean;
   label?: string;
+  zIndex?: number;
 };
 
 export default function Select({
@@ -30,6 +31,7 @@ export default function Select({
   outline = false,
   hideLabel = false,
   label = "Label",
+  zIndex
 }: SelectProps) {
   return (
     <div className={twMerge("grid gap-4 items-center", hideLabel ? "gap-0" : "md:grid-cols-[100px_repeat(1,1fr)]")}>
@@ -41,6 +43,7 @@ export default function Select({
           onChange={onChange}
           multiple={multiple}
           searchable={searchable}
+          zIndex={zIndex}
         >
           <SelectTrigger>
             <div
