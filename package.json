@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006",
     "start": "serve -s dist -l $PORT",
     "build-storybook": "storybook build",
-    "start-storybook": "ls -la && ls -la storybook-static || true && serve -s storybook-static -l $PORT"
+    "start-storybook": "serve storybook-static -p 6006"
   },
   "dependencies": {
     "@hrdi/searchable-select": "file:./pkg/hrdi-searchable-select-1.0.0.tgz",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@storybook/react-vite": "^10.2.7",
+    "@storybook/react-vite": "10.2.7",
     "@tailwindcss/cli": "^4.1.18",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
@@ -34,10 +34,10 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "eslint-plugin-storybook": "^10.2.7",
+    "eslint-plugin-storybook": "10.2.7",
     "globals": "^16.5.0",
     "postcss": "^8.5.6",
-    "storybook": "^10.2.7",
+    "storybook": "10.2.7",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
