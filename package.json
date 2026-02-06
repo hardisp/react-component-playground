@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "start": "serve -s dist -l $PORT"
+    "start": "serve -s dist -l $PORT",
+    "start-storybook": "serve -s storybook-static -l $PORT"
   },
   "dependencies": {
     "@hrdi/searchable-select": "file:./pkg/hrdi-searchable-select-1.0.0.tgz",
