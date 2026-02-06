@@ -18,13 +18,15 @@ type SelectStoryArgs = {
   outlined: boolean;
   hideLabel: boolean;
   label: string;
-  zIndex?: number;
+  zIndex: number;
+  isPortal: boolean;
 };
 
 export const Playground: StoryObj<SelectStoryArgs> = {
   args: {
     multiple: true,
     searchable: true,
+    isPortal: false,
     markMatchKeyword: true,
     searchPosition: "top",
     outlined: true,
@@ -55,6 +57,7 @@ export const Playground: StoryObj<SelectStoryArgs> = {
         hideLabel={args.hideLabel}
         label={args.label}
         zIndex={args.zIndex}
+        isPortal={args.isPortal}
       />
     );
   },

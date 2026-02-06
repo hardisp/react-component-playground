@@ -13,9 +13,12 @@ export default function App() {
   const [configure, setConfigure] = useState({
     isMultiple: true,
     isSearchable: true,
-    outlined: true
+    outlined: true,
+    isPortal: false,
   });
-     const [value, setValue] = useState<SelectOptionProps[] | SelectOptionProps>([]); 
+  const [value, setValue] = useState<SelectOptionProps[] | SelectOptionProps>(
+    [],
+  );
   return (
     <div className="p-10">
       <div className="min-h-screen relative">
@@ -23,7 +26,15 @@ export default function App() {
           Hardi Searchable Select Example
         </h2>
 
-        <Select value={value} onChange={setValue} multiple={configure.isMultiple} searchable={configure.isSearchable} outline={configure.outlined} options={options} />
+        <Select
+          value={value}
+          onChange={setValue}
+          multiple={configure.isMultiple}
+          searchable={configure.isSearchable}
+          outline={configure.outlined}
+          options={options}
+          isPortal={configure.isPortal}
+        />
 
         <div className="flex gap-4 mt-6">
           <button
@@ -67,6 +78,20 @@ export default function App() {
             }}
           >
             Outlined: {configure.outlined ? "ON" : "OFF"}
+          </button>
+          <button
+            className="rounded-full"
+            onClick={() => {
+              setConfigure((_prev) => {
+                return {
+                  ..._prev,
+                  isPortal: !_prev.isPortal,
+                };
+              });
+              setValue([]);
+            }}
+          >
+            Portal: {configure.isPortal ? "ON" : "OFF"}
           </button>
         </div>
 

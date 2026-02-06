@@ -20,6 +20,7 @@ type SelectProps = {
   hideLabel?: boolean;
   label?: string;
   zIndex?: number;
+  isPortal?: boolean;
 };
 
 export default function Select({
@@ -31,7 +32,8 @@ export default function Select({
   outline = false,
   hideLabel = false,
   label = "Label",
-  zIndex
+  zIndex,
+  isPortal = false
 }: SelectProps) {
   return (
     <div className={twMerge("grid gap-4 items-center", hideLabel ? "gap-0" : "md:grid-cols-[100px_repeat(1,1fr)]")}>
@@ -60,7 +62,7 @@ export default function Select({
           </SelectTrigger>
 
           <SelectDropdown
-            portal={false}
+            portal={isPortal}
             searchOptions={{
               searchIcon: <MagnifyingGlassIcon width={"1em"} height={"1em"} />,
               clear: true,
