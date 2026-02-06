@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@hrdi/searchable-select": "file:./pkg/hrdi-searchable-select-1.0.0.tgz",
@@ -33,6 +35,9 @@
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "storybook": "^10.2.7",
+    "@storybook/react-vite": "^10.2.7",
+    "eslint-plugin-storybook": "^10.2.7"
   }
 }
